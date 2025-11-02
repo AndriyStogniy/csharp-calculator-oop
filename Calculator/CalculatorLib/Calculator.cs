@@ -2,7 +2,7 @@
 {
     public class Calculator
     {
-        public double LastResult { get; private set; }
+        public double LastResult { get; protected set; }
 
         public double Add(double a, double b)
         {
@@ -19,7 +19,7 @@
             LastResult = a * b;
             return LastResult;
         }
-        public double Divide(double a, double b)
+        public virtual double Divide(double a, double b)
         {
             if (b == 0)
                 throw new DivideByZeroException("Division by zero is impossible");
